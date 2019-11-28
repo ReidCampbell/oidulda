@@ -26,18 +26,18 @@ const Form = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" />
                 </FormItem>
-            </FormWrapper>
 
-            <BtnWrapper>
-                <Button text="REGISTER" />
-            </BtnWrapper>
-            <BtnWrapper>
-                <div
-                    className="g-signin2"
-                    id="google"
-                    data-longtitle="true"
-                ></div>
-            </BtnWrapper>
+                <BtnWrapper>
+                    <Button text="REGISTER" />
+                </BtnWrapper>
+                <BtnWrapper>
+                    <div
+                        className="g-signin2"
+                        id="google"
+                        data-longtitle="true"
+                    ></div>
+                </BtnWrapper>
+            </FormWrapper>
         </Container>
     );
 };
@@ -52,6 +52,7 @@ const Title = styled.p`
 `;
 
 const FormItem = styled.div`
+    display: flex;
     position: relative;
     font-family: "Open Sans", sans-serif;
     margin-bottom: 15px;
@@ -65,6 +66,7 @@ const FormItem = styled.div`
     }
     & > input {
         width: 100%;
+        height: 100%;
         border: 1px solid #dcdcdc;
         outline: none;
         padding: 10px;

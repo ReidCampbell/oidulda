@@ -24,19 +24,26 @@ const Container = styled.div`
     display: flex;
     flex: 1;
     border-radius: 25px;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    width: 60vw;
+
+    @media (max-width: 760px) {
+        display: inline;
+        width: 90vw;
+        height: 90vh;
+    }
 `;
 
 const LeftColumn = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
+
     position: relative;
-    width: 35vw;
 
     background-image: url(${img});
     background-position: center;
@@ -62,6 +69,9 @@ const LeftColumn = styled.div`
     @media (max-width: 900px) {
         background-position: 65% 0%;
     }
+    @media (max-width: 760px) {
+        height: 20vh;
+    }
 `;
 
 const RightColumn = styled.div`
@@ -73,7 +83,11 @@ const RightColumn = styled.div`
     padding: 4% 8% 2% 8%;
     & > p {
         font-weight: bold;
-        color: #555555; /* Grey */
+        color: #555555;
         margin: 10px 10px 20px 0px;
+    }
+    @media (max-width: 760px) {
+        padding: 2%;
+        border-radius: 0px 0px 25px 25px;
     }
 `;

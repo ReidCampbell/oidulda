@@ -16,9 +16,12 @@ export default LeftText;
 const Text = styled.div`
     color: white;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.2em;
+    font-size: 0.9vw;
     letter-spacing: 0.05em;
     & > p {
         margin-bottom: -1em;
+    }
+    @media (max-width: 760px) {
+        font-size: 2.4vw;
     }
 `;
